@@ -2,8 +2,7 @@ import argparse
 
 def arg():
     parser = argparse.ArgumentParser()
-    parser.parse_args()
-    parser.add_argument("file", help="increase output file")
+    parser.add_argument("--file", help="increase output file")
     args = parser.parse_args()
     return args
 
@@ -15,6 +14,5 @@ def main(fi):
     print(contents)
 
 if __name__ == "__main__":
-    args = arg()
-
-    main(args.file)
+    arg = arg()
+    main(arg.file)
