@@ -10,7 +10,7 @@ def arg():
 def main(fi):
     #1st read input
     contents = ""
-    with open('fi', 'r') as f:
+    with open(fi, 'r') as f:
         contents = f.read()
     print(contents)
 
