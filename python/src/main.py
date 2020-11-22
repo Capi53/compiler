@@ -18,9 +18,10 @@ def main(fi):
     tokens = []
 
     for l in contents:
-        tokens.append(t.create_tokens(l))
+        tokens += t.create_tokens(l)
 
-    print(tokens)
+    for _ in tokens:
+        print(_)
 
 
 if __name__ == "__main__":
