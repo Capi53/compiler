@@ -9,10 +9,19 @@ def arg():
 
 def main(fi):
     #1st read input
-    contents = ""
+    contents = []
     with open(fi, 'r') as f:
-        contents = f.read()
-    print(contents)
+        for line in f:
+            contents.append(line)
+
+    t = lexer.LexerAnalyzer()
+    tokens = []
+
+    for l in contents:
+        tokens.append(t.create_tokens(l))
+
+    print(tokens)
+
 
 if __name__ == "__main__":
     arg = arg()
